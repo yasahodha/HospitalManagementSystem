@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employees | Hospital</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="employees">
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-badge">H+</div>
+        <div>
+          <h1>Employees</h1>
+          <div class="badge">Hospital staff</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/" data-page="home">Dashboard</a>
+        <a href="/appointments.html" data-page="appointments">Appointments</a>
+        <a href="/patients.html" data-page="patients">Patients</a>
+        <a href="/doctors.html" data-page="doctors">Doctors</a>
+        <a href="/employees.html" data-page="employees" class="active">Employees</a>
+      </nav>
+    </header>
+
+    <section class="section">
+      <div id="pageNotice" class="notice" hidden></div>
+
+      <div class="grid-two">
+        <div class="card">
+          <h2 class="section-title">Add Employee</h2>
+          <form class="form" id="employeeForm">
+            <div>
+              <label for="employeeName">Name</label>
+              <input id="employeeName" type="text" placeholder="Kiran Naik" required />
+            </div>
+            <div>
+              <label for="employeePosition">Position</label>
+              <input id="employeePosition" type="text" placeholder="Nurse" required />
+            </div>
+            <div>
+              <label for="employeeHireDate">Hire Date</label>
+              <input id="employeeHireDate" type="date" required />
+            </div>
+            <button class="btn btn-primary" type="submit">Save Employee</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Employee List</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Hire Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="employeesTableBody">
+              <tr><td colspan="5">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

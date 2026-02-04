@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctors | Hospital</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="doctors">
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-badge">H+</div>
+        <div>
+          <h1>Doctors</h1>
+          <div class="badge">Manage specialists</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/" data-page="home">Dashboard</a>
+        <a href="/appointments.html" data-page="appointments">Appointments</a>
+        <a href="/patients.html" data-page="patients">Patients</a>
+        <a href="/doctors.html" data-page="doctors" class="active">Doctors</a>
+        <a href="/employees.html" data-page="employees">Employees</a>
+      </nav>
+    </header>
+
+    <section class="section">
+      <div id="pageNotice" class="notice" hidden></div>
+
+      <div class="grid-two">
+        <div class="card">
+          <h2 class="section-title">Add Doctor</h2>
+          <form class="form" id="doctorForm">
+            <div>
+              <label for="doctorName">Name</label>
+              <input id="doctorName" type="text" placeholder="Dr. Ananya Rao" required />
+            </div>
+            <div>
+              <label for="doctorSpeciality">Speciality</label>
+              <input id="doctorSpeciality" type="text" placeholder="Cardiology" required />
+            </div>
+            <button class="btn btn-primary" type="submit">Save Doctor</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Doctor List</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Speciality</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="doctorsTableBody">
+              <tr><td colspan="4">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patients | Hospital</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="patients">
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-badge">H+</div>
+        <div>
+          <h1>Patients</h1>
+          <div class="badge">Patient registry</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/" data-page="home">Dashboard</a>
+        <a href="/appointments.html" data-page="appointments">Appointments</a>
+        <a href="/patients.html" data-page="patients" class="active">Patients</a>
+        <a href="/doctors.html" data-page="doctors">Doctors</a>
+        <a href="/employees.html" data-page="employees">Employees</a>
+      </nav>
+    </header>
+
+    <section class="section">
+      <div id="pageNotice" class="notice" hidden></div>
+
+      <div class="grid-two">
+        <div class="card">
+          <h2 class="section-title">Add Patient</h2>
+          <form class="form" id="patientForm">
+            <div>
+              <label for="patientName">Name</label>
+              <input id="patientName" type="text" placeholder="Aarav Sharma" required />
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="patientGender">Gender</label>
+                <select id="patientGender" required>
+                  <option value="" disabled selected>Select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="patientDob">Date of Birth</label>
+                <input id="patientDob" type="date" required />
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Save Patient</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Patient List</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="patientsTableBody">
+              <tr><td colspan="5">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

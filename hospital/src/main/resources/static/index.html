@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Management</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-page="home">
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-badge">H+</div>
+        <div>
+          <h1>Hospital Management</h1>
+          <div class="badge">Static UI</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/" data-page="home" class="active">Dashboard</a>
+        <a href="/appointments.html" data-page="appointments">Appointments</a>
+        <a href="/patients.html" data-page="patients">Patients</a>
+        <a href="/doctors.html" data-page="doctors">Doctors</a>
+        <a href="/employees.html" data-page="employees">Employees</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h2>Today's Snapshot</h2>
+        <p>Track core hospital activity at a glance.</p>
+      </div>
+      <div class="card">
+        <div class="kpi" id="appointmentCount">0</div>
+        <p>Appointments</p>
+      </div>
+      <div class="card">
+        <div class="kpi" id="patientCount">0</div>
+        <p>Patients</p>
+      </div>
+      <div class="card">
+        <div class="kpi" id="doctorCount">0</div>
+        <p>Doctors</p>
+      </div>
+      <div class="card">
+        <div class="kpi" id="employeeCount">0</div>
+        <p>Employees</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div id="pageNotice" class="notice" hidden></div>
+
+      <div class="card">
+        <h3 class="section-title">Quick Actions</h3>
+        <div class="grid-two">
+          <div>
+            <p>Add new patient and book appointment in one step.</p>
+            <a class="btn btn-primary" href="/appointments.html">Book Appointment</a>
+          </div>
+          <div>
+            <p>Manage doctors, patients, and employees from dedicated pages.</p>
+            <a class="btn btn-ghost" href="/doctors.html">Manage Doctors</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="section-title">Recent Appointments</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Patient</th>
+              <th>Doctor</th>
+              <th>Date</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="recentAppointmentsBody">
+            <tr><td colspan="5">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
